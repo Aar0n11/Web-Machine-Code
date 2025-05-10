@@ -14,8 +14,8 @@
       margin-top: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      max-height: 400px; /* Fixed height */
-      overflow-y: auto; /* Enable vertical scrolling */
+      max-height: 400px;
+      overflow-y: auto;
     }
     #register-history, #register-viewer, #register-history-select {
       margin-top: 20px;
@@ -35,30 +35,29 @@
   </style>
 </head>
 <body>
-  <h1>BinaryLang Output</h1>
-  <div id="output">Loading...</div>
-  
+  <h1>BinaryLang Interpreter</h1>
+
+  <h2>Load BinaryLang File:</h2>
+  <input type="file" id="file-input" accept=".binjs" />
+
+  <div id="output">No program loaded.</div>
+
   <h2>Register History:</h2>
   <pre id="register-history">Register history will appear here...</pre>
-  
+
   <h2>Register Viewer:</h2>
   <pre id="register-viewer">Selected register values will appear here...</pre>
 
-  <h2>Select Register for History:</h2>
   <select id="register-select">
     <option value="">Select a register</option>
   </select>
-
-  <h2>Register History for Selected Register:</h2>
   <pre id="register-history-select">Selected register history will appear here...</pre>
 
-    <!-- …existing HTML… -->
-    <h2>Screen:</h2>
-    <canvas id="screen" width="200" height="200"
-            style="border:1px solid #333; image-rendering: pixelated;">
-        Your browser doesn’t support canvas.
-    </canvas>
-    <!-- …existing HTML… -->  
+  <h2>Screen:</h2>
+  <canvas id="screen" width="200" height="200"
+          style="border:1px solid #333; image-rendering: pixelated;">
+      Your browser doesn’t support canvas.
+  </canvas>
 
   <script src="binarylang.js"></script>
   <script src="scripts.js"></script>
